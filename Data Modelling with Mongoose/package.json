@@ -1,0 +1,16 @@
+{
+  "name": "data-modelling-with-mongoose",
+  "version": "1.0.0",
+  "description": "about mongoose",
+  "license": "ISC",
+  "author": "vishu saini",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.4.1"
+  }
+}
