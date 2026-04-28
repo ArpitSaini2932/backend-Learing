@@ -1,5 +1,9 @@
 import dotenv from "dotenv"
 import connectDB from "./db/index.js"
+import express from "express"
+
+const app = express()
+
 
 dotenv.config({
     path: "./env"
@@ -7,6 +11,14 @@ dotenv.config({
 
 
 connectDB()
+.then(
+    app.listen(process.env.PORT || 8000, ()=>{
+        console.log("Port is running on ", process.env.PORT)
+    })
+)
+.catch((error)=>{
+    console.log("MongDB Connection error ", error);
+})
 
 
 
